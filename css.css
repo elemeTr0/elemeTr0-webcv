@@ -1,6 +1,11 @@
 @media screen and (min-width: 768px){
+html, body{
+    height: 100%;
+}
 body{
-    overflow: hidden;
+    margin: 0;
+    background: url("yourvintage-abstract-black-white-wave-background-free-video.jpg-background-image.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 .main
 {
@@ -15,6 +20,8 @@ body{
 }
 #back
 {
+    position:absolute;
+    visibility: none;
     display: block;
     top: 0;
   left: 0;
@@ -22,7 +29,9 @@ body{
     height: auto;
     width: 100%;
     height: 100%;
-    opacity: 5%;    
+    opacity: 5%;
+    object-fit: cover;
+  z-index: -1; 
 }
 #mid
 {
