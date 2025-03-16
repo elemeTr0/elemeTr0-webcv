@@ -1,0 +1,105 @@
+@media screen and (max-width: 768px) {
+* {
+    box-sizing: border-box; /* Includes borders in width and height calculations */
+}
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    box-shadow: 1px 0px 40px -4px rgba(69,0,130,0.87) inset;
+-webkit-box-shadow: 1px 0px 40px -4px rgba(69,0,130,0.87) inset;
+-moz-box-shadow: 1px 0px 40px -4px rgba(69,0,130,0.87) inset;
+height: calc(var(--vh, 1vh) * 100);
+overflow: hidden; 
+}
+
+/* Background Image */
+#back {
+    opacity: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+/* Main Container */
+.main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically for mobile */
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--vh, 1vh) * 100); /* Full screen height */
+}
+
+/* Profile Section */
+#mid {
+    text-align: center;
+    max-height: calc(var(--vh, 1vh) * 100); /* Limit elements to fit within the screen */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#image {
+    width: 120px; /* Smaller profile image for mobile */
+    border-radius: 50%;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.ime {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    color: transparent;
+    font-weight: bold;
+    background: linear-gradient(to right, #fff 0%, #262626 50%, #fff 100%);
+    background-size: 1000px; /* Ensure background-size is set correctly */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    animation: animate 5s infinite linear; /* Add linear timing function */
+}
+@keyframes animate {
+        0%{
+        background-position: -500px;
+        }
+        100%{
+        background-position: 500px;
+}
+}
+
+#ime2 {
+    font-size: 18px;
+    color: white;
+}
+
+#job {
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-top: 20px;
+}
+
+/* Sidebar (Social Media Icons) */
+#sidebar {
+    display: flex;
+    flex-direction: row; /* Align icons horizontally for mobile */
+    gap: 15px; /* Add spacing between icons */
+    max-height: calc(var(--vh, 1vh) * 100); /* Limit elements to fit within the screen */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#ig {
+    width: 30px; /* Smaller icons for mobile */
+    height: 30px;
+    filter: invert(1);
+}
+
+/* Next Button */
+#next {
+    visibility: hidden;
+    margin-top: 20px;
+    width: 40px; /* Adjust size for mobile */
+}
+}

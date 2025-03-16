@@ -1,3 +1,7 @@
+@media screen and (min-width: 768px){
+body{
+    overflow: hidden;
+}
 .main
 {
     height: 400px;
@@ -149,4 +153,5 @@ display: flex;
     cursor: pointer;
     size: 100%;
     transform: scale(1.2);
+}
 }
